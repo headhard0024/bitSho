@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layRoot"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_18sdp"
+        android:paddingBottom="@dimen/_18sdp"
+        android:paddingLeft="@dimen/_16sdp"
+        android:paddingRight="@dimen/_13sdp"
+        android:gravity="left"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/_48sdp"
+            android:padding="@dimen/_3sdp"
+            app:srcCompat="@drawable/ic_btc"
+            android:minHeight="@dimen/_48sdp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:gravity="left"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:text="Bitcoin"
+                    android:textColor="@color/black33"
+                    android:fontFamily="@font/opensans_medium"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:gravity="left"
+                    android:textColor="@color/black33"
+                    android:fontFamily="@font/iranyekanmobilebold"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:text="1.250.000.000"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtPriceName"
+                    android:layout_width="wrap_content"
+                    android:text="تومان"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black8E"
+                    android:fontFamily="@font/iranyekanmobilelight"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:id="@+id/txtSymbol"
+                    android:layout_width="wrap_content"
+                    android:text="BTC"
+                    android:textSize="@dimen/_11sdp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black8E"
+                    android:fontFamily="@font/opensans_medium"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtPercentChange"
+                    android:layout_width="wrap_content"
+                    android:text="4.5%+"
+                    android:textSize="@dimen/_11sdp"
+                    android:fontFamily="@font/iranyekanmobilemedium"
+                    android:textColor="@color/redRate"
+                    android:textDirection="ltr"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:background="@color/divider"
+            android:layout_height="0.5dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

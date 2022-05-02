@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">بیت شو</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cd_setting">setting fragment</string>
+    <string name="cd_home">home fragment</string>
+    <string name="bazar">بازار</string>
+    <string name="exchangeRate">نرخ ارز</string>
+    <string name="setting">تنظیمات</string>
+    <string name="threePoint">...</string>
+</resources>

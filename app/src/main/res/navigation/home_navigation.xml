@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="ir.mohammadno3ratii.app.dev.digicoinshow.view.fragment.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentCoinDetails"
+            app:destination="@id/fragmentCoinDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCoinDetails"
+        android:name="ir.mohammadno3ratii.app.dev.digicoinshow.view.fragment.FragmentCoinDetails"
+        android:label="fragment_coin_details"
+        tools:layout="@layout/fragment_coin_details" >
+        <action
+            android:id="@+id/action_fragmentCoinDetails_to_fragmentTransactionWebView"
+            app:destination="@id/fragmentTransactionWebView" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTransactionWebView"
+        android:name="ir.mohammadno3ratii.app.dev.digicoinshow.view.fragment.FragmentTransactionWebView"
+        android:label="fragment_transaction_web_view"
+        tools:layout="@layout/fragment_transaction_web_view" />
+</navigation>

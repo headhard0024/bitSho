@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_navigation"
+        android:contentDescription="@string/cd_home"
+        android:icon="@drawable/ic_bottom_sheet_cryptocurrency"
+        android:title="@string/bazar"/>
+
+    <item
+        android:id="@+id/exchange_rate_navigation"
+        android:contentDescription="@string/cd_setting"
+        android:icon="@drawable/ic_bottom_sheet_dollar"
+        android:title="@string/exchangeRate"/>
+
+    <item
+        android:id="@+id/setting_navigation"
+        android:contentDescription="@string/cd_setting"
+        android:icon="@drawable/ic_bottom_sheet_setting"
+        android:title="@string/setting"/>
+
+
+</menu>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".view.fragment.FragmentCoinDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="0dp"
+                        android:gravity="right"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/_16sdp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/iranyekanmobilemedium"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="@dimen/_30sdp"
+                        android:padding="@dimen/_4sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        app:srcCompat="@drawable/ic_arrow_back"
+                        android:layout_height="@dimen/_30sdp"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtRank"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:text="@string/threePoint"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/iranyekanmobilemedium"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_color_accent_t80"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_16sdp"
+                        tools:ignore="MissingConstraints">
+
+                        <ImageView
+                            android:id="@+id/imgLogo"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_coin" />
+
+                        <TextView
+                            android:id="@+id/txtSymbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:fontFamily="@font/opensans_medium"
+                            android:text="@string/threePoint"
+                            android:textColor="@color/black8E"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <TextView
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/opensans_bold"
+                            android:text="@string/threePoint"
+                            android:textColor="@color/black33"
+                            android:textSize="@dimen/_15sdp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/iranyekanmobilemedium"
+                                android:text="@string/threePoint"
+                                android:textColor="@color/black33"
+                                android:textSize="@dimen/_14sdp" />
+
+                            <TextView
+                                android:id="@+id/txtPriceName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:fontFamily="@font/iranyekanmobilemedium"
+                                android:text="تومان"
+                                android:textColor="@color/black33"
+                                android:textSize="@dimen/_14sdp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:gravity="center"
+                            android:background="@drawable/shape_color_white"
+                            android:padding="@dimen/_8sdp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textColor="@color/black33"
+                                    android:text="تعقیرات 1 ساعت گذشته"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/txtChangeOneHour"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/threePoint"
+                                    android:textDirection="ltr"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:background="@color/divider"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:layout_height="0.5dp"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textColor="@color/black33"
+                                    android:text="تعقیرات 1 روز گذشته"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/txtChangeOneDay"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/threePoint"
+                                    android:textDirection="ltr"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:background="@color/divider"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:layout_height="0.5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:textColor="@color/black33"
+                                    android:text="تعقیرات 7 روز گذشته"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:id="@+id/txtChangeSevenDay"
+                                    android:layout_width="wrap_content"
+                                    android:text="@string/threePoint"
+                                    android:textDirection="ltr"
+                                    android:textColor="@color/black33"
+                                    android:textSize="@dimen/_13sdp"
+                                    android:fontFamily="@font/iranyekanmobilemedium"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/txtTransaction"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:background="@drawable/button_color_accent"
+                            android:text="نمودار معاملات بازار جهانی"
+                            android:textColor="@color/justWhite"
+                            android:textSize="@dimen/_13sdp"
+                            android:fontFamily="@font/iranyekanmobilemedium"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

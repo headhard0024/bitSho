@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0277BD</color>
+    <color name="colorPrimaryDark">#0277BD</color>
+    <color name="colorAccent">#72C6BE</color>
+
+    <color name="Transpanet">#00FFFFFF</color>
+    <color name="whiteTranspanet80">#334DB6AC</color>
+    <color name="whiteTranspanet60">#664DB6AC</color>
+    <color name="whiteTranspanet40">#994DB6AC</color>
+    <color name="whiteTranspanet20">#CC4DB6AC</color>
+
+    <color name="justWhite">#FFFFFF</color>
+
+    <color name="white">#222222</color>
+    <color name="black">#ffffff</color>
+    <color name="background">#333333</color>
+
+    <color name="black33">#fafafa</color>
+    <color name="black4C">#f1f1f1</color>
+    <color name="black8E">#f1f1f1</color>
+    <color name="divider">#f1f1f1</color>
+
+    <color name="icon">#444444</color>
+    <color name="CC">#CCCCCC</color>
+    <color name="E8">#3E3E3E</color>
+    <color name="CCT50">#80CCCCCC</color>
+
+    <color name="greenRate">#4CAF50</color>
+    <color name="redRate">#F44336</color>
+
+    <color name="justErrorRed">#F67064</color>
+
+</resources>
