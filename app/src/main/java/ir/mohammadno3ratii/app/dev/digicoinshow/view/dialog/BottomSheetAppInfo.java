@@ -8,11 +8,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatDrawableManager;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 import ir.mohammadno3ratii.app.dev.digicoinshow.R;
+
 public class BottomSheetAppInfo extends BottomSheetDialog {
 
     public BottomSheetAppInfo(@NonNull Context context) {
@@ -32,28 +36,32 @@ public class BottomSheetAppInfo extends BottomSheetDialog {
         @SuppressLint("RestrictedApi")
         Drawable iconLikeId =
                 AppCompatDrawableManager.get().getDrawable(getContext(), R.drawable.ic_like);
-        btnSupport.setCompoundDrawablesRelativeWithIntrinsicBounds(iconLikeId,null, null, null);
+        btnSupport.setCompoundDrawablesRelativeWithIntrinsicBounds(iconLikeId, null, null, null);
 
         @SuppressLint("RestrictedApi")
         Drawable iconSourceId =
                 AppCompatDrawableManager.get().getDrawable(getContext(), R.drawable.ic_open_source);
-        btnSource.setCompoundDrawablesRelativeWithIntrinsicBounds(iconSourceId,null, null, null);
+        btnSource.setCompoundDrawablesRelativeWithIntrinsicBounds(iconSourceId, null, null, null);
 
 
         btnSupport.setOnClickListener(view -> {
-            String url = "http://mohammadno3ratii.ir/support.html";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            getContext().startActivity(i);
+            startIntent("http://mohammadno3ratii.ir/support.html");
         });
 
         btnSource.setOnClickListener(view -> {
-            String url = "https://github.com/mohammadno3rati/bitsho";
+            startIntent("https://github.com/mohammadno3rati/bitsho");
+        });
+
+    }
+
+    private void startIntent(String url) {
+        try {
             Intent i = new Intent(Intent.ACTION_VIEW);
             i.setData(Uri.parse(url));
             getContext().startActivity(i);
-        });
-
+        } catch (Exception e) {
+            Toast.makeText(getContext(), "برنامه روی دستگاه شما شناسایی نشد!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

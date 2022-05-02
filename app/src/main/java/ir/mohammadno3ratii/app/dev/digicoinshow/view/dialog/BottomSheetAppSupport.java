@@ -52,10 +52,14 @@ public class BottomSheetAppSupport extends BottomSheetDialog {
         btnTelegram.setCompoundDrawablesRelativeWithIntrinsicBounds(iconTelegramId, null, null, null);
 
         btnEmail.setOnClickListener(view -> {
-            Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "info.bitSho@gmial.com"));
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "مشکل در اجرای برنامه");
-            emailIntent.putExtra(Intent.EXTRA_TEXT, "");
-            getContext().startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
+            try {
+                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + "info.bitSho@gmial.com"));
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "مشکل در اجرای برنامه");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+                getContext().startActivity(Intent.createChooser(emailIntent, "Chooser Title"));
+            } catch (Exception e) {
+                Toast.makeText(getContext(), "برنامه ارسال ایمیل روی دستگاه شما شناسایی نشد!", Toast.LENGTH_SHORT).show();
+            }
         });
 
         btnTelegram.setOnClickListener(view -> {
